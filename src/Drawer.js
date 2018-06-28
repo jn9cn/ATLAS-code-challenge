@@ -9,14 +9,14 @@ class SideDrawer extends Component {
   constuctor() {
     // eslint-disable-next-line
     this.state = {
-        drawerOpen: true
+        drawerOpen: false
     }
     this.handleDrawerOpen = this.handleDrawerOpen.bind(this)
     this.handleDrawerClose = this.handleDrawerClose.bind(this)
   }
 
   componentDidMount() {
-    this.setState({ drawerOpen: true })
+    this.setState({ drawerOpen: false })
   }
 
   toggle() {
@@ -24,34 +24,31 @@ class SideDrawer extends Component {
       else this.handleDrawerClose()
   }
 
-  handleDrawerOpen = () => {
-      console.log("open!")
+  handleDrawerOpen() {
     this.setState({ drawerOpen: true });
   };
 
-  handleDrawerClose = () => {
-      console.log("closing!")
+  handleDrawerClose() {
     this.setState({ drawerOpen: false });
   };
   
   render() {
-      console.log("render", this.state)
     if (this.state === null ) return ( <div></div> )
     return (
         <MuiThemeProvider>
-            <div style={{display: 'flex', justifyContent: 'flex-start'}}>
-            <img style={{height: '25px', width: '25px', transform: 'rotate(180deg)'}} 
+            <div className="open-button">
+                <img className="open-button" 
                     src={CollapsePanel} 
                     alt="collapsePanel" 
                     onClick={() => this.toggle()}
-                    />
+                />
             </div>
             <Drawer variant='temporary' open={this.state.drawerOpen}>
-                <div style={{display: 'flex', justifyContent: 'flex-end'}}>
-                    <img style={{height: '25px', width: '25px'}} 
-                    src={CollapsePanel} 
-                    alt="collapsePanel" 
-                    onClick={() => this.toggle()}
+                <div className="close-button">
+                    <img className="close-button" 
+                        src={CollapsePanel} 
+                        alt="collapsePanel" 
+                        onClick={() => this.toggle()}
                     />
                 </div>
                 <Table />

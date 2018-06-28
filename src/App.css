@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  width: 100vw
 }
 
 .App-logo {
@@ -20,6 +23,35 @@
 
 .App-intro {
   font-size: large;
+}
+
+div.foreground {
+  width: 100%;
+}
+
+div.open-button {
+  padding: 5px;
+  height: 100vh; 
+  display: flex; 
+  justify-content: flex-start;
+  background-color: #ffffff;
+}
+
+img.open-button {
+  height: 25px; 
+  width: 25px; 
+  transform: rotate(180deg);
+}
+
+div.close-button {
+  padding: 5px; 
+  display: flex; 
+  justify-content: flex-end
+}
+
+img.close-button {
+  height: 25px; 
+  width: 25px;
 }
 
 @keyframes App-logo-spin {
