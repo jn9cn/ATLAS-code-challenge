@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 import data from './data.js';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import MuiTable from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import SortIcon from './Sort.svg'
+
 
 class Table extends Component {
   constuctor() {
@@ -87,34 +93,53 @@ class Table extends Component {
   }
   
   render() {
+    let iconName = null;
+    let iconCases = null;
+    if(this.state.sortName === 'asc') iconName = <img className="sort-button-asc" src={SortIcon} alt="sort-icon"/>
+    else if(this.state.sortName === 'desc') iconName = <img className="sort-button-desc" src={SortIcon} alt="sort-icon"/>
+    else iconName = <div></div>
+    if(this.state.sortCase === 'asc') iconCases = <img className="sort-button-asc" src={SortIcon} alt="sort-icon"/>
+    else if(this.state.sortCase === 'desc') iconCases = <img className="sort-button-desc" src={SortIcon} alt="sort-icon"/>
+    else iconCases = <div></div>
+
     return (
-        <MuiThemeProvider>
-
-        <table className="m-table">
-        <thead>
-            <tr>
-                <th>List of Communities</th>
-                <th>{this.state.communities.length}</th>
-                <th>communities in {this.state.name}</th>
-            </tr>
-          <tr>
-            <th onClick = {() => this.handleNameClick()}>Name</th>
-            <th onClick = {() => this.handleCaseClick()}>Cases</th>
-          </tr>
-        </thead>
-        <tbody>
-          {this.state.communities.map(function(elem, index) {
-            return (
-              <tr key={index} data-item={elem}>
-                <td data-title="Name">{elem.name}</td>
-                <td data-title="Cases">{elem.cases}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-
-      </MuiThemeProvider>
+        <MuiTable className="m-table">
+            <TableHead>
+                <TableRow>
+                    <TableCell>LIST OF COMMUNITIES</TableCell>
+                    <TableCell>
+                        <b>{this.state.communities.length}</b>
+                    </TableCell>
+                    <TableCell>
+                        <b>Communities</b> in <b>{this.state.name}</b>
+                    </TableCell>
+                </TableRow>
+            <TableRow>
+                <TableCell onClick = {() => this.handleNameClick()}>
+                    NAME
+                    {iconName}
+                </TableCell>
+                <TableCell onClick = {() => this.handleCaseClick()}>
+                    NUMBER OF CASES
+                    {iconCases}
+                </TableCell>
+            </TableRow>
+            </TableHead>
+            <TableBody>
+            {this.state.communities.map(function(elem, index) {
+                return (
+                <TableRow key={index} data-item={elem}>
+                    <TableCell data-title="Name">
+                        <b>{elem.name}</b>
+                    </TableCell>
+                    <TableCell data-title="Cases">
+                        {elem.cases}
+                    </TableCell>
+                </TableRow>
+                );
+            })}
+            </TableBody>
+        </MuiTable>
     );
   }
 }

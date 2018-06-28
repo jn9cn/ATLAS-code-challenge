@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Drawer from '@material-ui/core/Drawer'
 import CollapsePanel from './CollapsePanel.svg'
 import Table from './Table.js'
@@ -35,7 +34,7 @@ class SideDrawer extends Component {
   render() {
     if (this.state === null ) return ( <div></div> )
     return (
-        <MuiThemeProvider>
+        <div>
             <div className="open-button">
                 <img className="open-button" 
                     src={CollapsePanel} 
@@ -53,7 +52,7 @@ class SideDrawer extends Component {
                 </div>
                 <Table />
             </Drawer>
-        </MuiThemeProvider>
+        </div>
     );
   }
 }

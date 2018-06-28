@@ -54,6 +54,21 @@ img.close-button {
   width: 25px;
 }
 
+img.sort-button-asc {
+  height: 8px; 
+  width: 8px;
+  padding: 5px;
+  vertical-align: sub;
+  transform: rotate(180deg);
+}
+
+img.sort-button-desc {
+  height: 8px; 
+  width: 8px;
+  padding: 5px;
+  vertical-align: sub;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
