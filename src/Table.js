@@ -105,13 +105,10 @@ class Table extends Component {
     return (
         <MuiTable className="m-table">
             <TableHead>
-        <div>hi</div>
                 <TableRow>
-                    <TableCell>LIST OF COMMUNITIES</TableCell>
                     <TableCell>
-                        <b>{this.state.communities.length}</b>
-                    </TableCell>
-                    <TableCell>
+                        <h5>LIST OF COMMUNITIES</h5><br/>
+                        <b><h1>{this.state.communities.length}</h1></b><br/>
                         <b>Communities</b> in <b>{this.state.name}</b>
                     </TableCell>
                 </TableRow>
