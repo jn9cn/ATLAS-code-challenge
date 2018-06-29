@@ -29,7 +29,7 @@ Visit: https://jn9cn.github.io/ATLAS-code-challenge/
 
 ### Retrospective
 
-This code assessment was a great learning experience in time management and approximating how long specific tasks will take (i.e., what I thought would take more time actually took less time than what I projected would take less time). Though I did not complete this project to my expectations due to time constraints, I am happy at what I've achieved given the amount of interupted hours I've dedicated to it. Thank you for this opportunity!
+This code assessment was a great learning experience in time management and approximating how long specific tasks will take (i.e., what I thought would take more time actually took less time than what I projected would take less time). Though I did not complete this project to my expectations due to time constraints, I am happy at what I've achieved given the amount of interrupted hours I've dedicated to it. Thank you for this opportunity!
 
 ## Next Steps
 
