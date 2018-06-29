@@ -1,3 +1,5 @@
+<img src="https://media.giphy.com/media/fLsvCo9EDM65YGiLST/giphy.gif" alt="Demo" height="480">
+
 # ATLAS Code Test
 
 An in-progress, side table drawer React app
