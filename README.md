@@ -35,4 +35,5 @@ This code assessment was a great learning experience in time management and appr
 
 - Lazy Loading JSON data in Table.js
 - Refine design elements with CSS
+- Refactor for mobile devices
 - Write tests
