@@ -105,6 +105,7 @@ class Table extends Component {
     return (
         <MuiTable className="m-table">
             <TableHead>
+        <div>hi</div>
                 <TableRow>
                     <TableCell>LIST OF COMMUNITIES</TableCell>
                     <TableCell>
