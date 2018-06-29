@@ -20,7 +20,7 @@ Visit: https://jn9cn.github.io/ATLAS-code-challenge/
 ### Initial Plan
 
 1. Initialize project with create-react-app
-2. Access and parse JSON
+2. Access and parse JSON and display data on table
 3. Implement ascending and descending sorts by column
 4. Implement drawer functionality using Material UI
 5. Refine visual presentation
