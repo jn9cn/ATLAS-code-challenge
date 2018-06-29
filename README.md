@@ -22,7 +22,7 @@ Visit: https://jn9cn.github.io/ATLAS-code-challenge/
 1. Initialize project with `create-react-app`
 2. Access and parse JSON and display data on table
 3. Implement ascending and descending sorts by column
-4. Implement drawer functionality using Material UI
+4. Implement drawer functionality using Material UI, SVG assets, and CSS
 5. Refine visual presentation
 6. Optimize performance
 7. Deploy
@@ -34,5 +34,5 @@ This code assessment was a great learning experience in time management and appr
 ## Next Steps
 
 - Lazy Loading JSON data in Table.js
-- Refine design elements with a CSS
+- Refine design elements with CSS
 - Write tests
